@@ -5,12 +5,17 @@ div {
     /* background-color: red; */
 }
 
-#score{
+#score {
     font-size: 5em;
     font-family: sans-serif;
-    color: white;
+    color: goldenrod;
+    background-color: black;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Teko', sans-serif;
 }
-
 
 img {
     width: 100%;
@@ -18,8 +23,29 @@ img {
 }
 
 main {
-    background-image: url("63121378-beautiful-space-background-with-stardust-and-stars-deep-far-space-cosmic-glowing-colors-milky-way-co.jpg");
-    width: 50em;
-    height: 50em;
+    background-image: url("hoth.gif");
+    background-size: cover;
+    width: 80em;
+    height: 70em;
     position: relative;
+    margin: auto;
+}
+
+section {
+    width: 70em;
+    height: 60em;
+}
+
+header {
+    width: 80em;
+    margin: auto;
+}
+
+body {
+    background-color: black;
+}
+
+#xwing {
+    position: absolute;
+    z-index: 99;
 }
