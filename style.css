@@ -2,7 +2,15 @@ div {
     position: absolute;
     width: 100px;
     height: 100px;
+    /* background-color: red; */
 }
+
+#score{
+    font-size: 5em;
+    font-family: sans-serif;
+    color: white;
+}
+
 
 img {
     width: 100%;
