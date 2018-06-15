@@ -2,7 +2,9 @@ var duck = document.getElementById('root');
 var duck2 = document.getElementById('root2');
 var sky = document.getElementsByTagName('main')
 var scoreText = document.getElementById('score')
-
+var hitbox = document.getElementById('hitbox');
+var hitbox2 = document.getElementById('hitbox2');
+console.log(hitbox)
 var score = 0;
 scoreText.innerHTML = "Votre score est de :" + score;
 
@@ -13,19 +15,27 @@ function move() {
 }
 
 function animation() {
-    duck.style.top = Math.random() * 90 + "%";
-    duck.style.left = Math.random() * 90 + "%";
-
-    duck2.style.top = Math.random() * 75 + "%";
-    duck2.style.left = Math.random() * 45 + "%";
-
+    var topPos1 = Math.random() * 90 + "%";
+    var leftpos1 = Math.random() * 90 + "%";
+    duck.style.top = topPos1;
+    duck.style.left = leftpos1;
+    hitbox.style.top = topPos1;
+    hitbox.style.left = leftpos1;
+    var topPos2 = Math.random() * 75 + "%";
+    var leftpos2 = Math.random() * 45 + "%";
+    duck2.style.top = topPos2;
+    duck2.style.left = leftpos2;
+    hitbox2.style.top = topPos2;
+    hitbox2.style.left = leftpos2;
 };
 move()
 
-duck.style.transition = "0.35s";
-duck2.style.transition = "0.35s";
-
-duck.addEventListener("click", function() {
+duck.style.transition = "2.5s";
+duck2.style.transition = "2.5s";
+hitbox.style.transition = "2.5s";
+hitbox2.style.transition = "2.5s";
+//hitbox.style.backgroundColor = "red";
+hitbox.addEventListener("click", function() {
     score++;
     scoreText.innerHTML = "Votre score est de :" + score;
     duck.style.display = "none";
@@ -33,14 +43,15 @@ duck.addEventListener("click", function() {
         duck.style.display = "block"
     }, 3000);
 });
-
-duck2.addEventListener("click", function() {
+hitbox2.style.backgroundColor = "green";
+hitbox2.addEventListener("click", function() {
     score++;
     scoreText.innerHTML = "Votre score est de :" + score;
     duck2.style.display = "none";
     setTimeout(function() {
         duck2.style.display = "block"
     }, 3000)
+    
 
 
 });

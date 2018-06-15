@@ -47,5 +47,10 @@ body {
 
 #xwing {
     position: absolute;
+    z-index: 98;
+}
+
+#hitbox,
+#hitbox2 {
     z-index: 99;
 }
