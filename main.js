@@ -4,7 +4,9 @@ var sky = document.getElementsByTagName('main')
 var scoreText = document.getElementById('score')
 var hitbox = document.getElementById('hitbox');
 var hitbox2 = document.getElementById('hitbox2');
-console.log(hitbox)
+var myAudio = document.getElementsByTagName('audio')[0];
+myAudio.play();
+// console.log(hitbox)
 var score = 0;
 scoreText.innerHTML = "Votre score est de :" + score;
 
@@ -39,19 +41,23 @@ hitbox.addEventListener("click", function() {
     score++;
     scoreText.innerHTML = "Votre score est de :" + score;
     duck.style.display = "none";
+    hitbox.style.display = "none"
     setTimeout(function() {
         duck.style.display = "block"
+        hitbox.style.display = "block"
     }, 3000);
 });
-hitbox2.style.backgroundColor = "green";
+// hitbox2.style.backgroundColor = "green";
 hitbox2.addEventListener("click", function() {
     score++;
     scoreText.innerHTML = "Votre score est de :" + score;
+    hitbox2.style.display = "none"
     duck2.style.display = "none";
     setTimeout(function() {
+        hitbox2.style.display = "none"
         duck2.style.display = "block"
     }, 3000)
-    
+
 
 
 });
