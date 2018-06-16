@@ -5,7 +5,8 @@ var scoreText = document.getElementById('score')
 var hitbox = document.getElementById('hitbox');
 var hitbox2 = document.getElementById('hitbox2');
 var myAudio = document.getElementsByTagName('audio')[0];
-myAudio.play();
+var music = myAudio.play();
+window.onload = music;
 // console.log(hitbox)
 var score = 0;
 scoreText.innerHTML = "Votre score est de :" + score;
@@ -54,7 +55,7 @@ hitbox2.addEventListener("click", function() {
     hitbox2.style.display = "none"
     duck2.style.display = "none";
     setTimeout(function() {
-        hitbox2.style.display = "none"
+        hitbox2.style.display = "block"
         duck2.style.display = "block"
     }, 3000)
 
