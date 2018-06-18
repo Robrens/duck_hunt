@@ -6,10 +6,19 @@ var hitbox = document.getElementById('hitbox');
 var hitbox2 = document.getElementById('hitbox2');
 var myAudio = document.getElementById('battle');
 var body = document.getElementsByTagName('body');
-var music = myAudio.play();
-window.onload = music;
 // console.log(hitbox)
 var score = 0;
+
+function setHalfVolume() {
+    myAudio.volume = 0.05;
+    var music = myAudio.play();
+}
+window.onload = music;
+var music = myAudio.play();
+function turnUp() {
+    myAudio.volume = 10;
+}
+
 scoreText.innerHTML = "Votre score est de :" + score;
 var incTir = 0;
 var tir = document.getElementsByClassName('lazer');
