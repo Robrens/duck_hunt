@@ -4,15 +4,24 @@ var sky = document.getElementsByTagName('main')
 var scoreText = document.getElementById('score')
 var hitbox = document.getElementById('hitbox');
 var hitbox2 = document.getElementById('hitbox2');
-var myAudio = document.getElementsByTagName('audio')[0];
+var myAudio = document.getElementById('battle');
+var body = document.getElementsByTagName('body');
 var music = myAudio.play();
 window.onload = music;
 // console.log(hitbox)
 var score = 0;
 scoreText.innerHTML = "Votre score est de :" + score;
+var incTir = 0;
+var tir = document.getElementsByClassName('lazer');
+document.body.addEventListener("click", function() {
+    tir[incTir].play();
+    if (incTir >= tir.length-1) {
+        incTir = 0;
+    }else{
+        incTir++;
+    }
 
-
-
+})
 function move() {
     window.setInterval(animation, 800);
 }
